@@ -1,0 +1,28 @@
+Arquitetura Flux com Redux do zero
+
+Redux - É uma biblioteca simples mas apesar de ser simples resolve muita coisa.
+
+Gerenciamento de Estado => Todo componente possui seu estado(onde são armazenadas suas variaveis que vão modificar alguma coisa no processo de renderização do componente).
+
+Diferente entre gerenciar o estado no redux e no componente => O estado dentro do componente só pode ser acessado e modificado dentro do seu próprio componente. Com redux todos os estados ficam armazenados e acessiveis em um unico lugar.
+
+Seguindo o fluxograma => Tudo começa na view, na view geralmente acontece uma ação do usuario. o action é um objeto que indica ao redux qual ação que deve ser feita no nosso estado. Ex: No momento que eu clico no botao, a ação é ouvida pelo middleware(trata de alguma maneira a informação e repassa para o reducer). O reducer vai ser o unico local onde poderemos alterar o estado da aplicação.
+Existe um reducer para cada funcionalidade do projeto.
+
+Reducer obrigatoriamente é uma pure function. Ele não faz nada além de alterar o estado da aplicação.
+
+State => Esse grande estado da aplicação, ele é imutavel. Toda alteração que a gente faz no estado da aplicação, ela não altera o estado e sim, cria um novo estado com a alteração feita.
+
+E por fim, o state é repassado para as views da aplicação.
+
+Listeners é a palavra chave.
+
+
+Eles ficam ouvindo algumas variaveis no estado. Apenas as variaveis que interessar a cada componente.
+
+
+Referencias :
+
+https://www.youtube.com/watch?v=69e1MoUWE1g
+
+https://medium.com/reactbrasil/iniciando-com-redux-c14ca7b7dcf
